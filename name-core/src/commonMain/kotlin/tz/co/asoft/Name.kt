@@ -31,7 +31,32 @@ class Name(private val value: String = "") {
     fun randomized() = Name(parts.shuffled().joinToString(" "))
 
     companion object {
-        val fakeNames = arrayOf("Raiden", "Anderson", "Hanzo", "Lameck", "Hasashi", "Kenshi", "Takeda", "Jackson", "Sonya", "Tremor", "Kotal", "Khan", "Cassie", "Johnny", "Cage", "Kabal", "Enenra", "Cyrax", "Sektor", "Jean", "T'Challa", "T'Chaka", "Okoye", "Wakabi")
+        val fakeNames = listOf(
+            "Raiden",
+            "Anderson",
+            "Hanzo",
+            "Lameck",
+            "Hasashi",
+            "Kenshi",
+            "Takeda",
+            "Jackson",
+            "Sonya",
+            "Tremor",
+            "Kotal",
+            "Khan",
+            "Cassie",
+            "Johnny",
+            "Cage",
+            "Kabal",
+            "Enenra",
+            "Cyrax",
+            "Sektor",
+            "Jean",
+            "T'Challa",
+            "T'Chaka",
+            "Okoye",
+            "Wakabi"
+        )
         val fake
             get() = if ((0..10).random() < 5) {
                 "${fakeNames.random()} ${fakeNames.random()}"
