@@ -1,32 +1,16 @@
-# ViewModel
+# Contacts
 ![badge][badge-maven] ![badge][badge-mpp] ![badge][badge-android] ![badge][badge-js] ![badge][badge-jvm]
 
-A kotlin multiplatform solution to logging
-
-## Samples
-```kotlin
-class CounterViewModel : VModel<Intent, State>(State(0)) {
-
-    data class State(val value: Int)
-
-    sealed class Intent {
-        data class CountUp(val by: Int) : Intent()
-        data class CountDown(val by: Int) : Intent()
-    }
-
-    override fun execute(i: Intent) = when (i) {
-        is Intent.CountUp -> ui.value = State(value = ui.value.value + i.by)
-        is Intent.CountDown -> ui.value = State(value = ui.value.value - i.by)
-    }
-}
-```
+A kotlin multiplatform library to help in validating contact elements such as Email, Phone and Name
 
 ## Setup: Gradle 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:viewmodel-core:0.0.1") //
+    implementation("tz.co.asoft:email-core:0.0.1") //
     // or
-    implementation("tz.co.asoft:viewmodel-react:0.0.1") // if using intended to be used in kotlin/react 
+    implementation("tz.co.asoft:phone-core:0.0.1") //
+    // or 
+    implementation("tz.co.asoft:name-core:0.0.1")
 }
 ```
 [badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/test/1.0.1?style=flat
