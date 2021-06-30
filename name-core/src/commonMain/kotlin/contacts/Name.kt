@@ -1,8 +1,9 @@
-@file:Suppress("PackageDirectoryMismatch")
+package contacts
 
-package tz.co.asoft
+import kotlinx.serialization.Serializable
 
-class Name(private val value: String = "") {
+@Serializable
+class Name(private val value: String) {
     private val parts get() = value.split(" ")
 
     val full get() = value
