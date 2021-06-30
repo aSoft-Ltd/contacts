@@ -2,6 +2,7 @@
 
 - Upgraded gradle from 6.7.1 to 7.0.2
 - Upgraded kotlin from 1.4.20 to 1.5.20
+- Added proper JVM Support
 
 # 0.0.1
 
