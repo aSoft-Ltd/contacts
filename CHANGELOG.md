@@ -1,3 +1,9 @@
+# 0.0.20: 2021.07.02
+- Reverted to kotlin 1.5.10
+- Updated expect to 0.0.41
+- Updated builders to 1.3.42
+- Updated build tools and used builders 1.3.42 API
+
 # 0.0.10: 2021.06.30
 
 - Upgraded gradle from 6.7.1 to 7.0.2

@@ -1,5 +1,6 @@
 import expect.expect
 import contacts.Email
+import expect.expectFunction
 import kotlin.test.*
 
 class EmailTest {
@@ -12,8 +13,8 @@ class EmailTest {
 
     @Test
     fun should_fail() {
-        expect { Email("kitimtim") }.toFail()
-        expect { Email("test.com") }.toFail()
+        expectFunction { Email("kitimtim") }.toFail()
+        expectFunction { Email("test.com") }.toFail()
     }
 
     @Test

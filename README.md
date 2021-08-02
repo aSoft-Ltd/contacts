@@ -8,15 +8,15 @@ A kotlin multiplatform library to help in validating contact elements such as Em
 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:email-core:0.0.10") //
+    implementation("tz.co.asoft:email-core:0.0.20") //
     // or
-    implementation("tz.co.asoft:phone-core:0.0.10") //
+    implementation("tz.co.asoft:phone-core:0.0.20") //
     // or 
-    implementation("tz.co.asoft:name-core:0.0.10")
+    implementation("tz.co.asoft:name-core:0.0.20")
 }
 ```
 
-[badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/exepct-core/0.0.10?style=flat
+[badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/exepct-core/0.0.20?style=flat
 
 [badge-mpp]: https://img.shields.io/badge/kotlin-multiplatform-blue?style=flat
 
