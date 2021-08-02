@@ -2,6 +2,8 @@ package contacts
 
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
+import kotlin.jvm.JvmInline
+import kotlin.jvm.JvmStatic
 
 @JsExport
 @Serializable(with = EmailSerializer::class)
