@@ -11,7 +11,7 @@ kotlin {
         library();withJava()
     }
     js(IR) { library() }
-    nativeTargets(false)
+    nativeTargets(true)
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -21,6 +21,7 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 api(asoft("expect-core", vers.asoft.expect))
+                api(kotlinx("serialization-json", vers.kotlinx.serialization))
             }
         }
     }

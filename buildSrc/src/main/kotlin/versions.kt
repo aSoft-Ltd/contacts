@@ -1,5 +1,5 @@
 object vers {
-    val kotlin = "1.5.10"
+    val kotlin = "1.5.30"
     val nexus_staging = "0.22.0"
 
     object kotlinx {
@@ -7,8 +7,9 @@ object vers {
     }
 
     object asoft {
-        val contacts = "0.0.20"
-        val builders = "1.3.42"
-        val expect = "0.0.41"
+        val foundation = "1.4.0"
+        val contacts = "0.0.30"
+        val builders = foundation
+        val expect = foundation
     }
 }

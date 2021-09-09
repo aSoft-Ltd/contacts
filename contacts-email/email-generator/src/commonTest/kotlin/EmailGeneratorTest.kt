@@ -10,4 +10,10 @@ class EmailGeneratorTest {
         println(emails)
         expect(emails).toBeOfSize(20)
     }
+
+    @Test
+    fun should_be_able_to_generate_email_for_a_given_name() {
+        val email = EmailGenerator.generateFor("Johny Cage")
+        println(email)
+    }
 }

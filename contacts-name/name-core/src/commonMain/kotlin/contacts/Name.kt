@@ -33,4 +33,14 @@ class Name(value: String) {
     val firstLast get() = "$first $last"
 
     fun randomized() = Name(parts.shuffled().joinToString(" "))
+
+    override fun equals(other: Any?): Boolean = when (other) {
+        is String -> value == other
+        is Name -> value == other.value
+        else -> false
+    }
+
+    override fun hashCode(): Int = value.hashCode()
+
+    override fun toString() = value
 }

@@ -6,9 +6,10 @@ import kotlin.test.*
 class EmailTest {
 
     @Test
-    fun should_pass() {
+    fun should_have_the_same_equality() {
         expect("${Email("andy@lamax.com")}").toBe("andy@lamax.com")
         expect("andy@lamax.com").toBe(Email("andy@lamax.com").toString())
+        expect(Email("andy@lamax.com")).toBe(Email("andy@lamax.com"))
     }
 
     @Test

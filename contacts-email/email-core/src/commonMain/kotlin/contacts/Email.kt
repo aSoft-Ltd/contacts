@@ -7,7 +7,7 @@ import kotlin.jvm.JvmStatic
 
 @JsExport
 @Serializable(with = EmailSerializer::class)
-class Email(internal val value: String) {
+class Email(val value: String) {
     init {
         val parts = value.split("@")
         if (parts.size != 2 || parts.getOrNull(1)?.contains(".") != true) {
@@ -20,6 +20,14 @@ class Email(internal val value: String) {
     val identity get() = parts.first()
 
     val domain get() = parts.last()
+
+    override fun equals(other: Any?): Boolean = when (other) {
+        is String -> value == other
+        is Email -> value == other.value
+        else -> false
+    }
+
+    override fun hashCode(): Int = value.hashCode()
 
     override fun toString() = value
 }

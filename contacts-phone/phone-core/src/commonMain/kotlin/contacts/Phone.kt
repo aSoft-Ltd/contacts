@@ -13,7 +13,15 @@ class Phone(phone: String) {
     @JsName("_ofNumber")
     constructor(phone: Long) : this(phone.toString())
 
-    internal val value: String = parse(phone)
+    val value: String = parse(phone)
+
+    override fun equals(other: Any?): Boolean = when (other) {
+        is String -> value == other
+        is Phone -> value == other.value
+        else -> false
+    }
+
+    override fun hashCode(): Int = value.hashCode()
 
     override fun toString() = value
 }

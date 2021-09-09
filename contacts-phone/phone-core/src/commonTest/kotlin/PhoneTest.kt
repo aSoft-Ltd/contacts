@@ -1,4 +1,5 @@
 import contacts.Phone
+import expect.expect
 import kotlin.test.*
 
 class PhoneTest {
@@ -35,5 +36,10 @@ class PhoneTest {
     fun should_throw_error() {
         assertFails { Phone(2) }
         assertFails { Phone(0) }
+    }
+
+    @Test
+    fun should_be_equal() {
+        expect(Phone("255752748674")).toBe(Phone("255752748674"))
     }
 }

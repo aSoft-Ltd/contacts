@@ -13,12 +13,16 @@ object EmailGenerator {
         "microsoft.com"
     )
 
-    fun random(): Email {
-        val name = NameGenerator.random()
-        val identity = (if ((1..10).random() > 5) name.first + "." + name.last else name.first + name.last)
+    fun generateFor(name: Name): Email {
+        val (first, last) = if ((1..10).random() > 5) name.first to name.last else name.last to name.first
+        val identity = "$first${if ((1..10).random() > 5) "." else ""}$last"
             .lowercase().replace("'", "")
         return Email("$identity@${domains.random()}")
     }
+
+    fun generateFor(name: String): Email = generateFor(Name(name))
+
+    fun random(): Email = generateFor(NameGenerator.random())
 
     fun random(size: Int): List<Email> = List(size) { random() }
 }

@@ -6,13 +6,18 @@ plugins {
     signing
 }
 
+tasks.withType(JavaCompile::class) {
+    sourceCompatibility = "16"
+    targetCompatibility = "16"
+}
+
 kotlin {
     jvm {
         library()
         withJava()
     }
     js(IR) { library() }
-    nativeTargets(false)
+    nativeTargets(true)
     sourceSets {
         val commonMain by getting {
             dependencies {
